@@ -1,0 +1,6 @@
+framework module Pods_HWParty_Tests {
+  umbrella header "Pods-HWParty_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

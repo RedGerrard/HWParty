@@ -7,12 +7,23 @@
 //
 
 #import "HWAppDelegate.h"
+#import "HWParty.h"
 
 @implementation HWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UITabBarController *rootVC = [HWParty rootTabBarCcontroller];
+    //    icon_user_nav_a
+    [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_a" selectedImageName:@"icon_user_nav_a_a"  title:@"首页" isRequiredNavController:NO];
+    [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_b" selectedImageName:@"icon_user_nav_b_a" title:@"方案" isRequiredNavController:YES];
+    [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_c" selectedImageName:@"icon_user_nav_c_a" title:@"掌上操盘" isRequiredNavController:NO];
+    [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_d" selectedImageName:@"icon_user_nav_d_a" title:@"我的" isRequiredNavController:YES];
+    
+     
+    
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

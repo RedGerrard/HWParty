@@ -1,0 +1,6 @@
+framework module HWParty {
+  umbrella header "HWParty-umbrella.h"
+
+  export *
+  module * { export * }
+}

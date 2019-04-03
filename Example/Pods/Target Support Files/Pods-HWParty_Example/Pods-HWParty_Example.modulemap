@@ -1,0 +1,6 @@
+framework module Pods_HWParty_Example {
+  umbrella header "Pods-HWParty_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

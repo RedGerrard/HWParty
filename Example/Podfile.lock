@@ -1,0 +1,16 @@
+PODS:
+  - HWParty (0.1.0)
+
+DEPENDENCIES:
+  - HWParty (from `../`)
+
+EXTERNAL SOURCES:
+  HWParty:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HWParty: cecfb690a4009c4f0ce91c0e94d6b7cd19789a27
+
+PODFILE CHECKSUM: 8955ebc7f1ebffc337fa6f94708845cd33732ff9
+
+COCOAPODS: 1.6.1
