@@ -7,13 +7,11 @@
 //
 
 #import "HWParty.h"
-#import "HWTabBarController.h"
 
 @implementation HWParty
 + (HWTabBarController *)rootTabBarCcontroller {
     return [HWTabBarController shareInstance];
-}
-
+} 
 
 + (void)addChildVC:(UIViewController *)vc normalImageName:(NSString *)normalImageName selectedImageName:(NSString *)selectedImageName  title:(NSString *)title isRequiredNavController:(BOOL)isRequired {
     
@@ -24,7 +22,12 @@
 
 
 +(void)setTabBarColorNormal:(UIColor *)normal andSelected:(UIColor *)selected{
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:normal} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:selected} forState:UIControlStateSelected];
+    if (normal) {
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:normal} forState:UIControlStateNormal];
+    }
+    if (selected) {
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:selected} forState:UIControlStateSelected];
+    }
+    
 }
 @end

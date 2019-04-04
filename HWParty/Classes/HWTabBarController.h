@@ -9,21 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @interface HWTabBarController : UITabBarController
+
 /**
  上次选中的index
  */
 @property (nonatomic, assign) int lastIndex;
 
 /**
- 上次选中的UITabBarItem
+ 上次选中的lastItem
  */
 @property (nonatomic, strong) UITabBarItem *lastItem;
 
 /**
- 是否允许切换tabbarviewcontroller，默认值给NO
+ 是否能选中tabbar
  */
 @property (nonatomic, assign) BOOL itemState;
-
 
 /**
  获取单例对象
@@ -33,15 +33,6 @@
 + (instancetype)shareInstance;
 
 
-///**
-// 添加子控制器的block
-// 
-// @param addVCBlock 添加代码块
-// 
-// @return TabBarController
-// */
-//+ (instancetype)tabBarControllerWithAddChildVCsBlock: (void(^)(HWTabBarController *tabBarC))addVCBlock;
-//
 
 /**
  添加子控制器

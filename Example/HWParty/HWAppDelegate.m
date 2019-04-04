@@ -20,12 +20,20 @@
     [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_c" selectedImageName:@"icon_user_nav_c_a" title:@"掌上操盘" isRequiredNavController:NO];
     [HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_d" selectedImageName:@"icon_user_nav_d_a" title:@"我的" isRequiredNavController:YES];
     
-     
+    rootVC.delegate = self;
     
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    
+    NSLog(@"%d,%s",__LINE__,__func__);
+    
+    return true;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

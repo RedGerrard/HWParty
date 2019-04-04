@@ -10,7 +10,7 @@
 #import "HWNavigationController.h"
 #import "HWTabBar.h"
 
-@implementation HWTabBarController
+@implementation HWTabBarController 
 
 +(instancetype)shareInstance{
     static HWTabBarController *tabbarVC;
@@ -20,14 +20,7 @@
     });
     return tabbarVC;
 }
-
-//+(instancetype)tabBarControllerWithAddChildVCsBlock:(void (^)(HWTabBarController *))addVCBlock{
-//    HWTabBarController *tabbarVC = [HWTabBarController new];
-//    if (addVCBlock) {
-//        addVCBlock(tabbarVC);
-//    }
-//    return tabbarVC;
-//}
+ 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,30 +70,5 @@
     _lastIndex = (int)[tabBar.items indexOfObject:item];
 }
 
-
-- (void)setSelectedIndex:(NSUInteger)selectedIndex
-{
-    [super setSelectedIndex:selectedIndex];
-    
-    NSLog(@"%ld",selectedIndex);
-//    UIViewController *vc = self.childViewControllers[selectedIndex];
-//    if (vc.view.tag == 666) {
-//        vc.view.tag = 888;
-//
-//        XMGMiddleView *middleView = [XMGMiddleView middleView];
-//        middleView.middleClickBlock = [XMGMiddleView shareInstance].middleClickBlock;
-//        middleView.isPlaying = [XMGMiddleView shareInstance].isPlaying;
-//        middleView.middleImg = [XMGMiddleView shareInstance].middleImg;
-//        CGRect frame = middleView.frame;
-//        frame.size.width = 65;
-//        frame.size.height = 65;
-//        CGSize screenSize = [UIScreen mainScreen].bounds.size;
-//        frame.origin.x = (screenSize.width - 65) * 0.5;
-//        frame.origin.y = screenSize.height - 65;
-//        middleView.frame = frame;
-//        [vc.view addSubview:middleView];
-//
-//    }
-}
 
 @end

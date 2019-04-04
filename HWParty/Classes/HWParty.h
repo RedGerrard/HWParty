@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HWTabBarController.h"
 
 @interface HWParty : NSObject
 /**
@@ -14,8 +15,8 @@
  
  @return rootTabBarCcontroller
  */
-+ (UITabBarController *)rootTabBarCcontroller;
-
++ (HWTabBarController *)rootTabBarCcontroller;
+ 
 /**
  添加子控制器
  
