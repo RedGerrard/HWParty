@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.itemState = false;
     //换为自己的tabbar
     [self setValue:[[HWTabBar alloc] init] forKey:@"tabBar"];
     
