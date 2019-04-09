@@ -1,19 +1,29 @@
-# HWParty
+<h1 align="center"> HWParty</h1>自用的TabbarController框架
 
-[![CI Status](https://img.shields.io/travis/wozaizhelishua/HWParty.svg?style=flat)](https://travis-ci.org/wozaizhelishua/HWParty)
-[![Version](https://img.shields.io/cocoapods/v/HWParty.svg?style=flat)](https://cocoapods.org/pods/HWParty)
-[![License](https://img.shields.io/cocoapods/l/HWParty.svg?style=flat)](https://cocoapods.org/pods/HWParty)
-[![Platform](https://img.shields.io/cocoapods/p/HWParty.svg?style=flat)](https://cocoapods.org/pods/HWParty)
+## How To Use
+```
+#import <HWParty.h>
+...
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+UITabBarController *rootVC = [HWParty rootTabBarCcontroller];
+//    icon_user_nav_a
+[HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_a" selectedImageName:@"icon_user_nav_a_a"  title:@"首页" isRequiredNavController:NO];
+[HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_b" selectedImageName:@"icon_user_nav_b_a" title:@"方案" isRequiredNavController:YES];
+[HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_c" selectedImageName:@"icon_user_nav_c_a" title:@"掌上操盘" isRequiredNavController:NO];
+[HWParty addChildVC:[UIViewController new] normalImageName:@"icon_user_nav_d" selectedImageName:@"icon_user_nav_d_a" title:@"我的" isRequiredNavController:YES];
 
-## Example
+rootVC.delegate = self;
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+self.window.rootViewController = rootVC;
+[self.window makeKeyAndVisible];
+return YES;
+}
+```
 
 ## Installation
 
-HWParty is available through [CocoaPods](https://cocoapods.org). To install
+HWCyclePics is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -21,9 +31,10 @@ pod 'HWParty'
 ```
 
 ## Author
+本人小菜鸟一枚，欢迎各位同仁和大神指教
+<br>我的简书是：https://www.jianshu.com/u/cdd48b9d36e0
+<br>我的邮箱是：417705652@qq.com
 
-wozaizhelishua, kingboy941520@126.com
+## Licenses
 
-## License
-
-HWParty is available under the MIT license. See the LICENSE file for more info.
+All source code is licensed under the [MIT License](https://raw.github.com/SDWebImage/SDWebImage/master/LICENSE).
